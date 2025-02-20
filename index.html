@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainsMeals - Food & Travel Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Section */
+        header {
+            background-image: url('https://via.placeholder.com/1920x600.png?text=Food+and+Travel'); /* Replace with actual background image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .intro {
+            background-color: white;
+            padding: 30px;
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .intro p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* About Us Section */
+        .about-us {
+            background-color: white;
+            padding: 50px;
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about-us h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .about-us p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Recipe Section */
+        .recipes {
+            background-color: white;
+            padding: 50px;
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .recipes h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .recipe-item {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .recipe-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .recipe-item h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .recipe-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 10px;
+            display: inline-block;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+
+        .recipe-item a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .contact-form h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .intro h2 {
+                font-size: 1.5rem;
+            }
+
+            .intro p {
+                font-size: 0.9rem;
+            }
+
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+            .about-us h2,
+            .contact-form h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to MainsMeals</h1>
+        <p>Your community space to share food, recipes, and travel stories</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#media">Media</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Introductory Section -->
+        <section class="intro" id="home">
+            <h2>Discover, Share & Connect</h2>
+            <p>At MainsMeals, we bring together food lovers, recipe sharers, and travelers to explore new tastes and cultures. Whether you're looking for fresh recipes or planning your next adventure, you've found the perfect space to connect with like-minded individuals.</p>
+        </section>
+
+        <!-- Recipe Section -->
+        <section class="recipes" id="recipes">
+            <h2>Featured Recipes</h2>
+
+            <div class="recipe-item">
+                <img src="https://via.placeholder.com/300x200.png?text=Recipe+1" alt="Recipe 1">
+                <h3>Spaghetti Carbonara</h3>
+                <a href="https://www.example.com/recipe/spaghetti-carbonara" target="_blank">View Recipe</a>
+            </div>
+
+            <div class="recipe-item">
+                <img src="https://via.placeholder.com/300x200.png?text=Recipe+2" alt="Recipe 2">
+                <h3>Chicken Tikka Masala</h3>
+                <a href="https://www.example.com/recipe/chicken-tikka-masala" target="_blank">View Recipe</a>
+            </div>
+
+            <div class="recipe-item">
+                <img src="https://via.placeholder.com/300x200.png?text=Recipe+3" alt="Recipe 3">
+                <h3>Classic Caesar Salad</h3>
+                <a href="https://www.example.com/recipe/caesar-salad" target="_blank">View Recipe</a>
+            </div>
+        </section>
+
+        <!-- Gallery Section for Pictures -->
+        <section class="gallery" id="media">
+            <h2 style="text-align: center; width: 100%;">Gallery</h2>
+            <img src="https://via.placeholder.com/300x200.png?text=Dish+1" alt="Dish 1">
+            <img src="https://via.placeholder.com/300x200.png?text=Dish+2" alt="Dish 2">
+            <img src="https://via.placeholder.com/300x200.png?text=Dish+3" alt="Dish 3">
+            <img src="https://via.placeholder.com/300x200.png?text=Dish+4" alt="Dish 4">
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us" id="about">
+            <h2>About Us</h2>
+            <p>MainsMeals is a passionate community of food enthusiasts who enjoy exploring new recipes, sharing culinary experiences, and traveling to discover authentic cuisines from around the world. Join us as we connect, create, and indulge in all things food!</p>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form" id="contact">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2025 MainsMeals | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
